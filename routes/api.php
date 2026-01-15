@@ -16,11 +16,7 @@ use App\Http\Controllers\Api\NotificationController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
-// routes/api.php
-Route::post('/order-completed', [NotificationController::class, 'orderCompleted']);
+Route::post('/order-completed', [NotificationController::class, 'orderCompleted'])->middleware('client');
 
 
