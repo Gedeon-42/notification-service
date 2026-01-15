@@ -12,7 +12,6 @@ class NotificationController extends Controller
     //
     public function orderCompleted(ValidateOrderRequest $request)
     {
-
         $data = $request->validated();
         OrderCompletedEmail::dispatch($data);
         return response()->json([

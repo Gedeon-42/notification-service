@@ -25,7 +25,7 @@ class ValidateOrderRequest extends FormRequest
             //
             'order_id' => 'required',
             'email' => 'required|email',
-            'order_number' => 'required'
+            
         ];
     }
 }
