@@ -10,9 +10,11 @@ use App\Jobs\OrderCompletedEmail;
 class NotificationController extends Controller
 {
     //
+
     public function orderCompleted(ValidateOrderRequest $request)
     {
-        $data = $request->validated();
+    // sleep(10);   
+    $data = $request->validated();
         OrderCompletedEmail::dispatch($data);
         return response()->json([
             'message' => 'Notification sent in que'

@@ -17,6 +17,6 @@ use App\Http\Controllers\Api\NotificationController;
 */
 
 
-Route::post('/order-completed', [NotificationController::class, 'orderCompleted'])->middleware('client');
+Route::post('/order-completed', [NotificationController::class, 'orderCompleted']);
 
 
